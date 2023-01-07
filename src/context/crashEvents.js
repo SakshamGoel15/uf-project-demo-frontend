@@ -20,7 +20,7 @@ const CrashEventProvider = ({children}) => {
     const getCrashEvents = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch("http://localhost:5001/crash-events");
+            const response = await fetch("https://uf-project-demo.herokuapp.com/crash-events");
             const data = await response.json();
             setCrashEvents(data);
         } catch (error) {
@@ -33,7 +33,7 @@ const CrashEventProvider = ({children}) => {
     const getVehicleDetails = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch("http://localhost:5001/vehicle-details");
+            const response = await fetch("https://uf-project-demo.herokuapp.com/vehicle-details");
             const data = await response.json();
             setVehicleDetails(data);
         } catch (error) {
@@ -46,7 +46,7 @@ const CrashEventProvider = ({children}) => {
     const getDriverDetails = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch("http://localhost:5001/driver-details");
+            const response = await fetch("https://uf-project-demo.herokuapp.com/driver-details");
             const data = await response.json();
             setDriverDetails(data);
         } catch (error) {
@@ -59,7 +59,7 @@ const CrashEventProvider = ({children}) => {
     const getCrashEvent = async (id) => {
         setIsLoading(true);
         try {
-            const response = await fetch(`http://localhost:5001/crash-events/${id}`);
+            const response = await fetch(`https://uf-project-demo.herokuapp.com/crash-events/${id}`);
             const data = await response.json();
             setCrashEvent(data);
         } catch (error) {
